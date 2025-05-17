@@ -3,6 +3,16 @@
 <html>
 
 <head>
+<style>
+  body {
+    padding-top: 56px; /* Height of navbar */
+  }
+  
+  /* For smooth scrolling to sections */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 <title>Website of John Akwei</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="Website of John Akwei" />
@@ -14,7 +24,7 @@
 
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="#">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -250,16 +260,12 @@
   </div>
 </footer>
 
-<!-- The key changes:
-
-- Use Bootstrap for responsive navbar, grids, cards and forms 
-- Add carousel for images
-- Improve styling and spacing with sections, bg colors, py-5 etc
-- Simplify content
-- Use Unsplash images for demo
-- Add contact form
-
-This improves the overall responsive design, styling, content structure and interactivity. Additional enhancements could be made as well. -->
+<script>
+  // Close responsive nav when a nav item is clicked
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+  });
+</script>
 
 </body>
 </html>
